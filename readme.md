@@ -6,3 +6,4 @@ My attempt at the [Advent of Code](https://adventofcode.com/)
 | --- | ---------- | -------- |
 | 1   | JavaScript | ⭐⭐     |
 | 2   | Python     | ⭐⭐     |
+| 3   | GoLang     | ⭐       |
