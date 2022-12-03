@@ -14,6 +14,13 @@ func main() {
 		os.Exit(1)
 	}
 
+	part_one(input)
+	part_two(input)
+}
+
+
+func part_one(input []byte) {
+
 	lines := strings.Split(string(input), "\n")
 	total := 0
 	currentline := 0
@@ -47,6 +54,34 @@ func main() {
 	}	
 	fmt.Println("Total:", total)
 	
+}
+
+func part_two(input []byte) {
+	lines := strings.Split(string(input), "\n")
+	total := 0
+	currentline := 0
+
+	for ln, line := range lines {
+		if ln % 3 == 0 {
+			for _, firstRune := range line {
+				for _, secondRune := range lines[ln+1] {
+					for _, thirdRune := range lines[ln+2] {
+						if firstRune == secondRune && secondRune == thirdRune {
+							if currentline != ln {
+								continue
+							} else { 
+								currentline += 3
+							}
+							println("Found duplicate:", string(firstRune))
+							total += priority(string(firstRune))
+						}
+					}
+				}
+			}
+		}
+	}
+	fmt.Println("Total:", total)
+
 }
 
 func priority(item string) int {
