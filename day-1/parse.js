@@ -11,5 +11,11 @@ dataArray.forEach((item) => {
   parsedData.push(itemArray)
 })
 
+// To get part 1 answer
 const greatestNumber = parsedData.reduce((a, b) => Math.max(a, b))
 console.log(greatestNumber)
+
+// To get part 2 answer
+const topThree = parsedData.sort((a, b) => b - a).slice(0, 3)
+const topThreeTotal = topThree.reduce((a, b) => Number(a) + Number(b))
+console.log(topThreeTotal)
