@@ -25,11 +25,39 @@ isRangeWithinRange = (firstRange, secondRange) ->
 
     return false
 
+isAnyOverlap = (firstRange, secondRange) ->
+    firstRanges = firstRange.split(',')
+    secondRanges = secondRange.split(',')
+    
+    for rangeOne in firstRanges
+        [r1Start, r1End] = rangeOne.split('-')
+    
+        r1Start = parseInt(r1Start)
+        r1End = parseInt(r1End)
+    
+        if r1End is undefined
+          r1End = r1Start
+    
+        for rangeTwo in secondRanges
+          [r2Start, r2End] = rangeTwo.split('-')
+    
+        r2Start = parseInt(r2Start)
+        r2End = parseInt(r2End)
+    
+        if r2End is undefined
+            r2End = r2Start
+    
+        if (r1Start >= r2Start && r1Start <= r2End) || (r2Start >= r1Start && r2Start <= r1End)
+            return true
+    
+        return false
+
 fs = require 'fs'
 fs.readFile 'input.txt', 'utf8', (err, data) ->
     if err
         throw err
     overlaps = 0
+    anyOverlap = 0
     
     inputs = data.split '\n'
     inputs.forEach (input) ->
@@ -39,4 +67,8 @@ fs.readFile 'input.txt', 'utf8', (err, data) ->
         if isRangeWithinRange(data[0], data[1])
           overlaps++
         
+        if isAnyOverlap(data[0], data[1])
+          anyOverlap++
+        
     console.log "Found #{overlaps} overlaps"
+    console.log "Found #{anyOverlap} any overlaps"
