@@ -8,3 +8,4 @@ My attempt at the [Advent of Code](https://adventofcode.com/)
 | 2   | Python       | ⭐⭐     |
 | 3   | GoLang       | ⭐⭐     |
 | 4   | CoffeeScript | ⭐⭐     |
+| 5   | Ruby         | ⭐⭐     |
