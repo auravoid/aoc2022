@@ -9,4 +9,4 @@ My attempt at the [Advent of Code](https://adventofcode.com/)
 | 3   | GoLang       | ⭐⭐     |
 | 4   | CoffeeScript | ⭐⭐     |
 | 5   | Ruby         | ⭐⭐     |
-| 6   | PHP          | ⭐       |
+| 6   | PHP          | ⭐⭐     |
