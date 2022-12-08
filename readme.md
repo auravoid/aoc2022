@@ -10,4 +10,4 @@ My attempt at the [Advent of Code](https://adventofcode.com/)
 | 4   | CoffeeScript | ⭐⭐     |
 | 5   | Ruby         | ⭐⭐     |
 | 6   | PHP          | ⭐⭐     |
-| 7   | Perl         |          |
+| 7   | JavaScript   | ⭐⭐     |
