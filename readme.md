@@ -11,3 +11,4 @@ My attempt at the [Advent of Code](https://adventofcode.com/)
 | 5   | Ruby         | ⭐⭐     |
 | 6   | PHP          | ⭐⭐     |
 | 7   | JavaScript   | ⭐⭐     |
+| 8   | Python       | ⭐⭐     |
